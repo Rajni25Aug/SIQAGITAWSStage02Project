@@ -20,11 +20,7 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2040
-- serviceName: project.siqagitawsstage02.integrations:SIQAAdapterFlow
-  packages:
-  - name: SIQAGITAWSStage02Project
-    version: "1.0"
-- serviceName: project.siqagitawsstage02.integrations:deepclonetest
+- serviceName: project.siqagitawsstage02.integrations:Copy_deepclonetest
   packages:
   - name: SIQAGITAWSStage02Project
     version: "1.0"
@@ -40,3 +36,11 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2040
+- serviceName: project.siqagitawsstage02.integrations:SIQAAdapterFlow
+  packages:
+  - name: SIQAGITAWSStage02Project
+    version: "1.0"
+- serviceName: project.siqagitawsstage02.integrations:deepclonetest
+  packages:
+  - name: SIQAGITAWSStage02Project
+    version: "1.0"
