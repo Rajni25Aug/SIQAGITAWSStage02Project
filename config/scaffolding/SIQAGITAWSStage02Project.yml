@@ -12,6 +12,14 @@ services:
   packages:
   - name: SIQAGITAWSStage02Project
     version: "1.0"
+- serviceName: project.siqagitawsstage02.integrations:AlertsCRTandERT
+  packages:
+  - name: SIQAGITAWSStage02Project
+    version: "1.0"
+- serviceName: pub.alert:emit
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2040
 - serviceName: project.siqagitawsstage02.integrations:SIQAAdapterFlow
   packages:
   - name: SIQAGITAWSStage02Project
