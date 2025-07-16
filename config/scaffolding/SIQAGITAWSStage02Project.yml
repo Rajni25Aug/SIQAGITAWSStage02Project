@@ -12,16 +12,19 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 - name: SSL_JDBC_Test
+  version: "1.0"
   gitServerName: SIQAPsurGit
   gitUrl: https://github.com/prabhakarsag
   gitUsername: prabhakarsag
   gitBranch: main
 - name: JMS2waySSL
+  version: "1.0"
   gitServerName: SIQAPsurGit
   gitUrl: https://github.com/prabhakarsag
   gitUsername: prabhakarsag
   gitBranch: main
 - name: JMSTest
+  version: "1.0"
   gitServerName: SIQAPsurGit
   gitUrl: https://github.com/prabhakarsag
   gitUsername: prabhakarsag
@@ -31,6 +34,12 @@ services:
   packages:
   - name: SIQAGITAWSStage02Project
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
@@ -38,6 +47,12 @@ services:
 - serviceName: project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:DBInsert
   packages:
   - name: SIQAGITAWSStage02Project
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -47,6 +62,12 @@ services:
   packages:
   - name: SIQAGITAWSStage02Project
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
@@ -54,6 +75,12 @@ services:
 - serviceName: project.siqagitawsstage02.integrations:AlertsCRTandERT
   packages:
   - name: SIQAGITAWSStage02Project
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -63,9 +90,37 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2040
+- serviceName: project.siqagitawsstage02.integrations:JMS_JNDI_SSL
+  packages:
+  - name: SIQAGITAWSStage02Project
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: publisher:publisher
+  packages:
+  - name: JMSTest
+    version: "1.0"
+- serviceName: pub.jms:send
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2040
 - serviceName: project.siqagitawsstage02.integrations:SIQAAdapterFlow
   packages:
   - name: SIQAGITAWSStage02Project
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -74,6 +129,12 @@ services:
 - serviceName: project.siqagitawsstage02.integrations:deepclonetest
   packages:
   - name: SIQAGITAWSStage02Project
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -92,49 +153,49 @@ services:
   - name: WmPublic
     version: 11.1.0.0.2040
 configurationVariables:
-  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
-  : "1"
   ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
   : "0"
-  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
-  : "3306"
-  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
-  : ""
+  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
+  : tcp
+  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
+  : siqatest
+  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
+  : MYSQL_DATABASE
+  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
+  : "1"
   ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.expireTimeout
   : "1000"
   ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.transactionType
   : NO_TRANSACTION
   ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.keyStore
   : ""
-  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolable
-  : "false"
-  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
-  : tcp
   ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.serverName
   : 9.46.196.248
-  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
-  : siqatest
   ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
   : com.mysql.cj.jdbc.MysqlDataSource
+  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled
+  : "false"
+  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
+  : ""
+  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolable
+  : "false"
   ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
   : MySQL
   ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.driverType
   : driverTest
-  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
-  : MYSQL_DATABASE
-  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
-  : "1"
   ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.blockingTimeout
   : "1000"
-  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
-  : "10"
   ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.heartBeatInterval
   : "0"
-  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
-  : "10"
-  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled
-  : "false"
   ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
   : "{AES}D6/2AGfsSWDOcWCLrORnEQ=="
+  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
+  : "10"
   ? artConnection.SIQAGITAWSStage02Project.project.siqagitawsstage02.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
   : loginTimeout=60;driverType=thin;
